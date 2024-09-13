@@ -1,0 +1,240 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?cs=srgb&dl=pexels-kevin-ku-92347-577585.jpg&fm=jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: #fff;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero h1, .hero p {
+    position: relative;
+    z-index: 2;
+}
+
+/* Profile Picture Wrapper */
+.profile-pic-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 25vw; 
+    height: 25vw; 
+    margin: 0 auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#profile-pic {
+    transition: transform 0.6s ease;
+    width: 100%;
+    height: auto;
+}
+
+.profile-pic-wrapper:hover #profile-pic {
+    transform: scale(1.1);
+}
+
+/* Hero Text Responsiveness */
+#Name {
+    font-size: 5vw; 
+    font-weight: bold;
+}
+
+#Aspiring {
+    font-size: 3vw;
+}
+
+#Discover {
+    font-size: 2vw;
+}
+
+/* About Section */
+#about {
+    background: url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHByb2dyYW1taW5nfGVufDB8fDB8fHww') no-repeat center center/cover;
+    color: #fff;
+    padding: 60px 0;
+}
+
+#about .container {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 8px;
+}
+
+/* Skills Section */
+#skills {
+    background: url('https://plus.unsplash.com/premium_photo-1661882403999-46081e67c401?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZ3JhbW1pbmd8ZW58MHx8MHx8fDA%3D') no-repeat center center/cover;
+    color: #fff;
+    padding: 60px 0;
+}
+
+#skills .container {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.skill-box {
+    background: #361f33;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #444;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease;
+}
+
+.skill-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    background-color: #444;
+}
+
+.skill-box h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.skill-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.skill-box:hover .skill-icon {
+    transform: scale(1.1);
+}
+
+/* Games Section */
+#games {
+    background: url('https://images.hdqwalls.com/wallpapers/purple-city-sy.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 60px 0;
+}
+
+.game-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.game-image {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.game-card:hover .game-image {
+    transform: scale(1.1);
+}
+
+.game-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+    transition: opacity 0.3s ease;
+}
+
+.game-card:hover .game-info {
+    opacity: 0.9;
+}
+
+.game-title {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/* Contact Section */
+#contact {
+    background: url('https://images.pexels.com/photos/1181275/pexels-photo-1181275.jpeg') no-repeat center center/cover;
+    color: #fff;
+    padding: 60px 0;
+}
+
+#contact .container {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 8px;
+}
+
+#contact input, #contact textarea {
+    margin-bottom: 15px;
+    background: #fff;
+    color: #333;
+    border-radius: 4px;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    #Name {
+        font-size: 40px;
+    }
+
+    #Aspiring {
+        font-size: 30px;
+    }
+
+    #Discover {
+        font-size: 20px;
+    }
+
+    .profile-pic-wrapper {
+        width: 200px;
+        height: 200px;
+    }
+
+    .hero {
+        height: auto;
+        padding: 50px 0;
+    }
+}
